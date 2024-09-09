@@ -1,57 +1,131 @@
-import Container from "@/components/container";
 import { urlForImage } from "@/lib/sanity/image";
 import Image from "next/image";
-import Link from "next/link";
+import Container from "@/components/container";
 
-export default function Gallery({ authors, settings }) {
+export default function Gallery({ images = [] }) {
   return (
     <Container>
       <h1 className="text-brand-primary mb-3 mt-2 text-center text-3xl font-semibold tracking-tight dark:text-white lg:text-4xl lg:leading-snug">
-        About
+        Gallery
       </h1>
       <div className="text-center">
-        <p className="text-lg">We are a smallffff passionate team.</p>
+        <p className="text-lg">A collection of 3D Prints.</p>
       </div>
 
-      <div className="mb-16 mt-6 grid grid-cols-3 gap-5 md:mb-32 md:mt-16 md:gap-16">
-        {authors.slice(0, 3).map(author => {
-          const imageProps = urlForImage(author?.image) || null;
+      {/* Section for test1.jpg */}
+      <div className="mb-16 mt-6 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:mb-32 md:mt-16 md:gap-16">
+        <div className="relative overflow-hidden rounded-md ">
+          <div className="relative aspect-square">
+            <Image
+              src="/images/test1.jpg"
+              alt="Test Image"
+              layout="fill"
+              objectFit="cover"
+              sizes="(max-width: 320px) 100vw, 320px"
+              className="object-cover"
+            />
+          </div>
+          <p className="text-center mt-2">Test Image</p>
+        </div>
+        <div className="relative overflow-hidden rounded-md ">
+          <div className="relative aspect-square">
+            <Image
+              src="/images/Dream.png"
+              alt="Dream3D Logo"
+              layout="fill"
+              objectFit="cover"
+              sizes="(max-width: 320px) 100vw, 320px"
+              className="object-cover"
+            />
+          </div>
+          <p className="text-center mt-2">Dream3D Logo</p>
+        </div>
+        <div className="relative overflow-hidden rounded-md ">
+          <div className="relative aspect-square">
+            <Image
+              src="/images/Dream.png"
+              alt="Dream3D Logo"
+              layout="fill"
+              objectFit="cover"
+              sizes="(max-width: 320px) 100vw, 320px"
+              className="object-cover"
+            />
+          </div>
+          <p className="text-center mt-2">Dream3D Logo</p>
+        </div>
+        <div className="relative overflow-hidden rounded-md">
+          <div className="relative aspect-square">
+            <Image
+              src="/images/Dream.png"
+              alt="Dream3D Logo"
+              layout="fill"
+              objectFit="cover"
+              sizes="(max-width: 320px) 100vw, 320px"
+              className="object-cover"
+            />
+          </div>
+          <p className="text-center mt-2">Dream3D Logo</p>
+        </div>
+        <div className="relative overflow-hidden rounded-md">
+          <div className="relative aspect-square">
+            <Image
+              src="/images/Dream.png"
+              alt="Dream3D Logo"
+              layout="fill"
+              objectFit="cover"
+              sizes="(max-width: 320px) 100vw, 320px"
+              className="object-cover"
+            />
+          </div>
+          <p className="text-center mt-2">Dream3D Logo</p>
+        </div>
+      </div>
+      
+      {/* Section for other images */}
+      <div className="mb-16 mt-6 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:mb-32 md:mt-16 md:gap-16">
+        {Array.isArray(images) && images.map((image, index) => {
+          if (image.src === "/images/test1.jpg" || image.src === "/images/Dream3D.png") return null; // Skip test1.jpg and Dream3D.png as they're already handled
+          const imageProps = urlForImage(image) || null;
           return (
             <div
-              key={author._id}
-              className="relative aspect-square overflow-hidden rounded-md bg-slate-50 odd:translate-y-10 odd:md:translate-y-16">
-              <Link href={`/author/${author?.slug}`}>
-                {imageProps && (
-                  <Image
-                    src={imageProps?.src}
-                    alt={author?.name || " "}
-                    fill
-                    sizes="(max-width: 320px) 100vw, 320px"
-                    className="object-cover"
-                  />
-                )}
-              </Link>
+              key={index}
+              className="relative overflow-hidden rounded-md bg-slate-50">
+              {imageProps && (
+                <>
+                  <div className="relative aspect-square">
+                    <Image
+                      src={imageProps.src}
+                      alt={image.alt || "Gallery Image"}
+                      layout="fill"
+                      objectFit="cover"
+                      sizes="(max-width: 320px) 100vw, 320px"
+                      className="object-cover"
+                    />
+                  </div>
+                  <p className="text-center mt-2">{image.alt || "Gallery Image"}</p>
+                </>
+              )}
             </div>
           );
         })}
       </div>
-
-      <div className="prose mx-auto mt-14 text-center dark:prose-invert">
-        <p>
-          We provide real-time connectivity to enable software
-          providers and financial institutions to build integrated
-          products for their small business customers.
-        </p>
-        <p>
-          Our API infrastructure is leveraged by clients ranging from
-          lenders to corporate card providers and business forecasting
-          tools, with use cases including automatic reconciliation,
-          business dashboarding, and loan decisioning.
-        </p>
-        <p>
-          <Link href="/contact">Get in touch</Link>
-        </p>
-      </div>
     </Container>
   );
+}
+
+export async function getStaticProps() {
+  // Replace with your image fetching logic
+  const images = [
+    { src: "/images/test1.jpg", alt: "Test Image" },
+    { src: "/images/Dream.png", alt: "Dream3D Logo" },
+    { src: "/images/image2.jpg", alt: "Image 2" },
+    { src: "/images/image3.jpg", alt: "Image 3" },
+    // Add more images as needed
+  ];
+
+  return {
+    props: {
+      images,
+    },
+  };
 }
