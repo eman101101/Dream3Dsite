@@ -75,7 +75,7 @@ export default function Gallery({ images = [] }) {
         <div className="relative overflow-hidden rounded-md ">
           <div className="relative aspect-square">
             <Image
-              src="/images/test4.jpg"
+              src="/images/test6.jpg"
               alt="Dream3D Logo"
               layout="fill"
               objectFit="cover"
@@ -83,8 +83,8 @@ export default function Gallery({ images = [] }) {
               className="object-cover"
             />
           </div>
-          <p className="text-center mt-2">Orbital Clock</p>
-          <a href="https://makerworld.com/en/models/540894?from=search#profileId-458402" className="block text-center text-blue-500 mt-2" target="_blank" rel="noopener noreferrer">Model Link</a>
+          <p className="text-center mt-2">3D Scan of Toronto</p>
+          <a href="https://thangs.com/designer/Micropolitan/3d-model/Toronto%2C%20ON%20-%20Small-1127876" className="block text-center text-blue-500 mt-2" target="_blank" rel="noopener noreferrer">Model Link</a>
         </div>
         <div className="relative overflow-hidden rounded-md">
           <div className="relative aspect-square">
