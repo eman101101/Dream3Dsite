@@ -52,7 +52,7 @@ export default function Home({ posts }) {
                 <p className="text-gray-600 dark:text-gray-300 mt-4">
                   Learn the fundamentals of 3D printing, including how to set up and operate a 3D printer.
                 </p>
-                <img src="/images/printers.webp" alt="Work 1" className="mt-4 rounded-lg shadow-lg" />
+                <Image src="/images/printers.webp" alt="Work 1" className="mt-4 rounded-lg shadow-lg" width={500} height={300} />
 
               </div>
               <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
@@ -62,7 +62,7 @@ export default function Home({ posts }) {
                 <p className="text-gray-600 dark:text-gray-300 mt-4">
                   Explore advanced 3D printing techniques to create complex objects.
                 </p>
-                <img src="/images/advanced.jpeg" alt="Work 1" className="mt-4 rounded-lg shadow-lg" />
+                <Image src="/images/advanced.jpeg" alt="Work 1" className="mt-4 rounded-lg shadow-lg" width={500} height={300} />
 
               </div>
               <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
@@ -72,7 +72,7 @@ export default function Home({ posts }) {
                 <p className="text-gray-600 dark:text-gray-300 mt-4">
                   Learn how to create custom 3D designs tailored to your specific needs and preferences.
                 </p>
-                                <img src="/images/fusion360.png" alt="Work 1" className="mt-4 rounded-lg shadow-lg" />
+                                <Image src="/images/fusion360.png" alt="Work 1" className="mt-4 rounded-lg shadow-lg" width={500} height={300} />
               </div>
             </div>
           </div>
@@ -91,7 +91,7 @@ export default function Home({ posts }) {
                 <p className="text-gray-600 dark:text-gray-300 mt-4">
                 I created a custom Raptors figure and painted it with the Bambu Lab colour changing system.
                 </p>
-                <img src="/images/work1.jpg" alt="Work 1" className="mt-4 rounded-lg shadow-lg" />
+                <Image src="/images/work1.jpg" alt="Work 1" className="mt-4 rounded-lg shadow-lg" width={500} height={300} />
 
               </div>
               <div className="bg-gray-100 dark:bg-gray-900 p-6 rounded-lg shadow-lg">
@@ -101,7 +101,7 @@ export default function Home({ posts }) {
                 <p className="text-gray-600 dark:text-gray-300 mt-4">
                 Made a 3D Scan of a figure and made it into a custom bust with photogrammetry, ensuring accurate detail and size.
                 </p>
-                <img src="/images/work2.jpg" alt="Work 1" className="mt-4 rounded-lg shadow-lg" />
+                <Image src="/images/work2.jpg" alt="Work 1" className="mt-4 rounded-lg shadow-lg" width={500} height={300} />
 
               </div>
               <div className="bg-gray-100 dark:bg-gray-900 p-6 rounded-lg shadow-lg">
@@ -111,7 +111,7 @@ export default function Home({ posts }) {
                 <p className="text-gray-600 dark:text-gray-300 mt-4">
                 I was asked to make a custom Sheep Yarn spinner and to make it a multi-colour print as well.
                 </p>
-                                <img src="/images/work3.jpg" alt="Work 1" className="mt-4 rounded-lg shadow-lg" />
+                                <Image src="/images/work3.jpg" alt="Work 1" className="mt-4 rounded-lg shadow-lg" width={500} height={300} />
               </div>
             </div>
           </div>

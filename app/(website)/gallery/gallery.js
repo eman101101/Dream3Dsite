@@ -9,7 +9,7 @@ export default function Gallery({ images = [] }) {
         Gallery
       </h1>
       <div className="text-center">
-        <p className="text-lg">A collection of some of the 3D prints I've made.</p>
+        <p className="text-lg">A collection of some of the 3D prints I&#39;ve made.</p>
       </div>
 
       {/* Section for test1.jpg */}

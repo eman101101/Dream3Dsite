@@ -13,8 +13,8 @@ export default function About({ authors, settings }) {
         <p className="text-lg">Hey I&apos;m Evan! I&apos;m making 3D printing easy for everyone</p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-2 items-center">
-        <img src="/images/evan.jpg" alt="Work 1" className="mt-4 rounded-lg shadow-lg w-96 h-96 object-cover mx-auto" />
-        <img src="/images/evan2.jpg" alt="Work 2" className="mt-4 rounded-lg shadow-lg w-96 h-96 object-cover mx-auto" />
+        <Image src="/images/evan.jpg" alt="Work 1" className="mt-4 rounded-lg shadow-lg w-96 h-96 object-cover mx-auto" width={384} height={384} />
+        <Image src="/images/evan2.jpg" alt="Work 2" className="mt-4 rounded-lg shadow-lg w-96 h-96 object-cover mx-auto" width={384} height={384} />
       </div>
       <div className="prose mx-auto mt-14 text-center dark:prose-invert">
         <p>
